@@ -1,38 +1,141 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+  height: 1024px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* css for the logo */
+.textlogo{
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  background-color: rgba(73, 55, 175, 1);
 }
+.textlogo h1{
+  font-size:24px;
+  font-weight:bolder; 
+  color: white;
+  padding: 3px;
+}
+/* end of css for the logo */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* css for the left side */
+.leftside{
+  margin-left: 50px;
+}
+/* end of css for the left side */
+
+/* css for the sign in form */
+.signinbox{
+  width: 480px;
+  height: 391px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+}
+.signinbox h1{
+  text-align: center;
+  font-size: 32px;
+  font-weight: bolder;
+  color: rgba(86, 86, 86, 1);
+}
+.signinbox label{
+  font-size: 13px;
+  font-weight: bolder;
+}
+.signinbox input{
+  width: 480px;
+  height: 32px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid rgba(86, 86, 86, 0.4);
+}
+
+.signinbox p{
+  font-size: 13px;
+}
+.signinbox span{
+  width: 224px;
+  height: 1px;
+  background-color: rgba(73, 55, 175, 0.45);
+  margin-top: 10px;
+}
+.signinbox .buttonSign, .buttonGoogle{
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid rgba(86, 86, 86, 0.4);
+  font-size: 14px;
+  font-weight: normal;
+}
+.signinbox .buttonSign{
+  background-color:rgba(73, 55, 175, 1); 
+  color:white;
+}
+.signinbox .buttonGoogle{
+  background-color:white; 
+  color:black;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
+.signinbox .buttonGoogle p{
+  font-size: 14px;
+  position: relative;
+  top: 8px;
+  left: 3px;
+}
+.googlelogo{
+  width: 24.72px;
+  height: 29.25px;
+  background-image: url("./images/Google.png");
+}
+/* end of the css for the sign in form */
 
-.App-link {
-  color: #61dafb;
+/* css for the svg on the right side */
+.bgimage{
+  height:1118px;
+  background-image: url("./images/Vector.png");
+  background-repeat: no-repeat;
 }
+.rightside{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1118px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+}
+.rightside .group{
+  width: 524px;
+  height: 316px;
+  background-image: url('./images/Group.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+@media screen and (max-width:1195px){
+  .rightside .group{
+    display: none;
   }
 }
+@media screen and (max-width:991px){
+  .container{
+    height: auto;
+  }
+.bgimage{
+  display: none;
+}
+.leftside{
+  background-image: url(./images/Vector.png);
+}
+}
+@media screen and (max-width:767px){
+  .leftside{
+    margin-left: 0px;
+    background-image: url(./images/Vector.png);
+  }
+}
+/* end of css for the svg on the right side */
+
